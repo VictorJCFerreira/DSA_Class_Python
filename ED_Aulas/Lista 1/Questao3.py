@@ -1,6 +1,5 @@
 ### Explicar a estratégia por trás da torre de hanoi
 
-# n = numero de discos a serem movidos
 def torre_hanoi(n, origem, destino, auxiliar):
     
     if (n == 1):                                                        

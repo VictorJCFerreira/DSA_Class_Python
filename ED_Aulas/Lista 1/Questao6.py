@@ -121,7 +121,6 @@ consultorio.entrada(Paciente(30,"P"))
 consultorio.entrada(Paciente(89,"L"))
 
 
-
 clinica = DCLL()
 clinica.entrada(Paciente(78,"A"))
 clinica.entrada(Paciente(42,"I"))
