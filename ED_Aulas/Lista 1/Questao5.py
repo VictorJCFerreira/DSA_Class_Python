@@ -7,45 +7,47 @@ class Paciente:
         self.idade = idade
         self.nome = nome
 
-
-class Node:
+class No:
     def __init__(self, paciente):
         self.paciente = paciente
         self.next = None
         self.prev = None
 
-class CLL:
-    def __init__(self, paciente):
-        self.paciente = paciente
+class DCLL:
+    def __init__(self):
         self.head = None
         self.tail = None
+        
+    def vazia(self):
+        return self.head == None
     
-    def adicionar(self, paciente):
-        novo = Node(paciente)
+    def entrada(self, paciente):
+        
+        novo = No(paciente)
             
-        if(self.head == None):
+        if (self.vazia()):
             novo.next = novo
             novo.prev = novo
             self.head = novo
             self.tail = novo
         
         #Idade mais baixa
-        elif(novo.paciente.idade <= self.head.paciente.idade):
-            atual = self.head
-            novo.next = atual
-            novo.prev = atual.prev
+        elif(self.head.paciente.idade >= novo.paciente.idade):
+            novo.next = self.head
+            novo.prev = self.head.prev
+            self.head.prev.next = novo 
+            self.head.prev = novo
             self.head = novo
-            self.head.prev = self.tail
         
         #Idade mais alta
-        elif(novo.paciente.idade >= self.tail.paciente.idade):
-            atual = self.tail
-            novo.next = atual.next
-            novo.prev = atual
+        elif(self.tail.paciente.idade <= novo.paciente.idade):
+            novo.next = self.head
+            novo.prev = self.tail
+            self.tail.next = novo
             self.tail = novo
-            self.tail.next = self.head
+            self.head.prev = self.tail
         
-        #meio
+        # No Meio
         else:
             atual = self.head
             while novo.paciente.idade > atual.paciente.idade:
@@ -56,9 +58,27 @@ class CLL:
                 self.head.prev = novo
                 self.tail.next = novo
                 self.head = novo
-            #item no meio da lista:
             else:
                 novo.next = atual
                 novo.prev = atual.prev
                 atual.prev.next = novo
                 atual.prev = novo
+                
+    def print(self):
+        atual = self.head
+        print(atual.paciente.idade, ":",atual.paciente.nome)
+        while atual.next is not self.head:
+            atual = atual.next
+            print(atual.paciente.idade, ":",atual.paciente.nome)
+            
+    
+hospital = DCLL()
+
+hospital.entrada(Paciente(22,"L"))
+hospital.entrada(Paciente(25,"M"))
+hospital.entrada(Paciente(30,"N"))
+hospital.entrada(Paciente(89,"O"))
+hospital.entrada(Paciente(12,"P"))
+hospital.entrada(Paciente(22,"Q"))
+
+hospital.print()

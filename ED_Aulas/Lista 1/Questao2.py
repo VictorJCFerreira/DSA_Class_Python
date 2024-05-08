@@ -50,3 +50,7 @@ end_time = time.time()
 recursive_time = end_time - start_time
 print("\n",recursive_time)
 
+## A recursão da série de collatz é uma função de complexidade n.log(n)
+## Se comparado a recursão de fibonacci, que é uma complexidade de (n)^2
+## A diferença é notavel, pois após um certo numero de operações em collatz, a série tende a se estabilizar
+## Já em fibonacci, ela so cresce cada vez mais, podendo gerear um estouro de pilha
