@@ -13,7 +13,7 @@ import time
 n = 77031
 
 def collatz_ite(n):
-    #print(n, end=" ")
+    print(n, end=" ")
     
     while n != 1:                       # Se o número atingiu 1, encerra a recursão
         
@@ -21,19 +21,19 @@ def collatz_ite(n):
             n = n // 2
         else:                           # Ímpar, chama a função recursiva com 3*n + 1
             n = 3 * n + 1
-        #print(n, end=" ")
+        print(n, end=" ")
 
 start_time = time.time()
 collatz_ite = collatz_ite(n)
 end_time = time.time()
 iterative_time = end_time - start_time
-print(iterative_time)
+print("\n",iterative_time)
 
 
 print("\n")
 
 def collatz_rec(n):
-    #print(n, end=" ")
+    print(n, end=" ")
     
     if n == 1:                          # Se o número atingiu 1, encerra a recursão
         return
@@ -48,4 +48,5 @@ start_time = time.time()
 collatz_rec = collatz_rec(n)
 end_time = time.time()
 recursive_time = end_time - start_time
-print(recursive_time)
+print("\n",recursive_time)
+
