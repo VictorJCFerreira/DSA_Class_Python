@@ -42,8 +42,8 @@ class DCLL:
         #Idade mais baixa
         elif(self.head.paciente.idade >= novo.paciente.idade):
             novo.next = self.head
-            novo.prev = self.head.prev
-            self.head.prev.next = novo 
+            novo.prev = self.tail
+            self.tail.next = novo 
             self.head.prev = novo
             self.head = novo
             self.count += 1
