@@ -94,7 +94,7 @@ deque.add_final(3)
 deque.add_frente(1)
 deque.add_final(4)
 
-deque.display()  # Saída esperada: 1 2 2 3 1 4 
+deque.display()
 
 remove_duplicatas(deque)
 

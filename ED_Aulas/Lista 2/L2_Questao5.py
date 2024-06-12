@@ -1,5 +1,5 @@
 ### Crie duas Pilhas com diferentes implementações:
-### Uma usando collecƟons.deque, e a outra usando Lista Encadeadas.
+### Uma usando collections.deque, e a outra usando Lista Encadeadas.
 ### discuta qual das duas implementações aparenta ser mais eficiente e por que ?
 
 from collections import deque

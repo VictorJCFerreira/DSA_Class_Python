@@ -69,11 +69,9 @@ class CircularDeque:
                 break
         print()
 
-# Exemplo de uso
 capacidade = 5
 circular_queue = CircularDeque(capacidade)
 
-# Adiciona elementos à fila circular
 circular_queue.enqueue(1)
 circular_queue.enqueue(2)
 circular_queue.enqueue(3)
@@ -84,7 +82,6 @@ circular_queue.print_queue()
 
 circular_queue.enqueue(6)
 circular_queue.enqueue(7)
-
 
 circular_queue.print_queue() 
 
