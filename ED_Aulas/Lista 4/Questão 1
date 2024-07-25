@@ -1,0 +1,29 @@
+
+Árvores em Teoria da Computação :
+
+As árvores são uma abstração essencial na computação, 
+e sua compreensão pode elevar nossos projetos a outro nível. 
+Elas são protagonistas no cenário de dados hierárquicos e otimização de buscas, 
+influenciando diretamente o desempenho e a eficiência tecnológica.
+
+
+Árvores em compiladores :
+
+Existem dois tipos principais:
+Analisadores Sintáticos Descendentes (Top-Down - ASD): 
+constroem a árvore gramatical do topo (raiz) para o fundo (folhas).
+
+Analisadores Sintáticos Ascendentes (Bottom-Up - ASA): 
+constroem a árvore gramatical do fundo (folhas) para o topo (raiz).
+
+
+ÁRVORE B:
+
+uma árvore B é uma estrutura de dados em árvore, auto-balanceada, 
+que armazena dados classificados e permite pesquisas, acesso sequencial, 
+inserções e remoções em tempo logarítmico. A árvore B é uma generalização 
+de uma árvore de pesquisa binária.
+
+Diferente das árvores de pesquisa binária auto-balanceadas, 
+a árvore B é bem adaptada para sistemas de armazenamento que leem e 
+escrevem blocos de dados relativamente grandes, como discos.
